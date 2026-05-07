@@ -1,0 +1,267 @@
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f8fff4;
+    overflow-x:hidden;
+}
+
+/* HEADER */
+header{
+    background:linear-gradient(to right,#ffb347,#ffcc33);
+    padding:20px;
+    text-align:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 3px 10px rgba(0,0,0,0.2);
+}
+
+header h1{
+    color:#4b2e00;
+    font-size:38px;
+}
+
+nav{
+    margin-top:10px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#4b2e00;
+    margin:0 15px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:white;
+}
+
+/* HERO */
+.hero,
+.hero-about,
+.hero-role{
+    height:85vh;
+    background:url('https://images.unsplash.com/photo-1511044568932-338cba0ad803?q=80&w=1200') center/cover;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    position:relative;
+}
+
+.hero-about{
+    background:url('https://images.unsplash.com/photo-1519052537078-e6302a4968d4?q=80&w=1200') center/cover;
+}
+
+.hero-role{
+    background:url('https://images.unsplash.com/photo-1574158622682-e40e69881006?q=80&w=1200') center/cover;
+}
+
+.hero::before,
+.hero-about::before,
+.hero-role::before{
+    content:'';
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.5);
+}
+
+.hero-text{
+    position:relative;
+    z-index:1;
+    color:white;
+    animation:fadeUp 2s;
+}
+
+.hero-text h2{
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+.hero-text p{
+    font-size:20px;
+    width:70%;
+    margin:auto;
+    line-height:1.7;
+}
+
+/* BUTTON */
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:15px 30px;
+    background:#ffb347;
+    color:black;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.4s;
+}
+
+.btn:hover{
+    background:white;
+    transform:scale(1.1);
+}
+
+/* SECTION */
+section{
+    padding:70px 10%;
+}
+
+.title{
+    text-align:center;
+    font-size:40px;
+    margin-bottom:40px;
+    color:#d97706;
+}
+
+/* CARD */
+.card,
+.about-card,
+.role-card{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 10px 20px rgba(0,0,0,0.1);
+    transition:0.4s;
+    animation:fadeUp 1s;
+}
+
+.card:hover,
+.about-card:hover,
+.role-card:hover{
+    transform:translateY(-10px);
+}
+
+.about-card{
+    margin-bottom:40px;
+    line-height:1.9;
+}
+
+.about-card p{
+    margin-bottom:15px;
+    font-size:17px;
+}
+
+/* CONTAINER */
+.container,
+.role-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:25px;
+}
+
+/* ROLE CARD */
+.role-card{
+    width:300px;
+    text-align:center;
+}
+
+.role-card h3{
+    margin:15px 0;
+    color:#ff8800;
+}
+
+.role-card p{
+    line-height:1.8;
+}
+
+/* IMAGE */
+.role-img,
+.manager-img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:15px;
+    transition:0.4s;
+}
+
+.manager-img{
+    width:250px;
+    display:block;
+    margin:20px auto;
+}
+
+.role-card:hover .role-img,
+.about-card:hover .manager-img{
+    transform:scale(1.05);
+}
+
+/* INFO */
+.info{
+    background:#fff3d6;
+    border-radius:25px;
+    padding:50px;
+    line-height:2;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+/* GALLERY */
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.gallery img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:20px;
+    transition:0.4s;
+}
+
+.gallery img:hover{
+    transform:scale(1.05);
+}
+
+/* FOOTER */
+footer{
+    background:#ffb347;
+    text-align:center;
+    padding:20px;
+    font-weight:bold;
+    margin-top:50px;
+}
+
+/* ANIMATION */
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(50px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+
+    .hero-text h2{
+        font-size:40px;
+    }
+
+    .hero-text p{
+        width:90%;
+        font-size:16px;
+    }
+
+    .title{
+        font-size:30px;
+    }
+
+}

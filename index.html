@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bustana Kucing Perlis</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body{
+            background:#f8fff4;
+            overflow-x:hidden;
+        }
+
+        /* HEADER */
+        header{
+            background:linear-gradient(to right,#ffb347,#ffcc33);
+            padding:20px;
+            text-align:center;
+            position:sticky;
+            top:0;
+            z-index:1000;
+            box-shadow:0 3px 10px rgba(0,0,0,0.2);
+        }
+
+        header h1{
+            font-size:40px;
+            color:#4b2e00;
+        }
+
+        nav{
+            margin-top:10px;
+        }
+
+        nav a{
+            text-decoration:none;
+            color:#4b2e00;
+            margin:0 15px;
+            font-weight:bold;
+            transition:0.3s;
+        }
+
+        nav a:hover{
+            color:white;
+        }
+
+        /* HERO */
+        .hero{
+            height:90vh;
+            background:url('https://images.unsplash.com/photo-1511044568932-338cba0ad803?q=80&w=1200') center/cover;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            text-align:center;
+            position:relative;
+        }
+
+        .hero::before{
+            content:'';
+            position:absolute;
+            width:100%;
+            height:100%;
+            background:rgba(0,0,0,0.5);
+        }
+
+        .hero-content{
+            position:relative;
+            color:white;
+            z-index:1;
+            animation:fadeUp 2s;
+        }
+
+        .hero-content h2{
+            font-size:60px;
+            margin-bottom:20px;
+        }
+
+        .hero-content p{
+            font-size:22px;
+            width:70%;
+            margin:auto;
+        }
+
+        .btn{
+            display:inline-block;
+            margin-top:25px;
+            padding:15px 30px;
+            background:#ffb347;
+            color:black;
+            border-radius:30px;
+            text-decoration:none;
+            font-weight:bold;
+            transition:0.3s;
+        }
+
+        .btn:hover{
+            background:white;
+            transform:scale(1.1);
+        }
+
+        /* SECTION */
+        section{
+            padding:70px 10%;
+        }
+
+        .title{
+            text-align:center;
+            font-size:40px;
+            margin-bottom:40px;
+            color:#d97706;
+        }
+
+        /* CARD */
+        .container{
+            display:flex;
+            flex-wrap:wrap;
+            justify-content:center;
+            gap:25px;
+        }
+
+        .card{
+            background:white;
+            width:300px;
+            padding:25px;
+            border-radius:20px;
+            text-align:center;
+            box-shadow:0 10px 20px rgba(0,0,0,0.1);
+            transition:0.4s;
+        }
+
+        .card:hover{
+            transform:translateY(-10px);
+        }
+
+        .card h3{
+            margin-bottom:15px;
+            color:#ff8800;
+        }
+
+        .card p{
+            line-height:1.7;
+        }
+
+        /* INFO */
+        .info{
+            background:#fff3d6;
+            border-radius:25px;
+            padding:50px;
+            line-height:2;
+            box-shadow:0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .info h2{
+            color:#cc7000;
+            margin-bottom:20px;
+            text-align:center;
+        }
+
+        /* GALLERY */
+        .gallery{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+            gap:20px;
+        }
+
+        .gallery img{
+            width:100%;
+            height:250px;
+            object-fit:cover;
+            border-radius:20px;
+            transition:0.4s;
+        }
+
+        .gallery img:hover{
+            transform:scale(1.05);
+        }
+
+        /* FOOTER */
+        footer{
+            background:#ffb347;
+            text-align:center;
+            padding:20px;
+            font-weight:bold;
+            margin-top:50px;
+        }
+
+        /* ANIMATION */
+        @keyframes fadeUp{
+            from{
+                opacity:0;
+                transform:translateY(50px);
+            }
+
+            to{
+                opacity:1;
+                transform:translateY(0);
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+
+        <h1>🐱 Bustana Kucing Perlis</h1>
+
+        <nav>
+            <a href="#home">Utama</a>
+            <a href="#about">Tentang</a>
+            <a href="#facility">Peranan</a>
+            <a href="#gallery">Galeri</a>
+        </nav>
+
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <h2>Selamat Datang ke Bustana Kucing Perlis</h2>
+
+
+            <a href="#about" class="btn">Lihat Maklumat</a>
+
+        </div>
+
+    </section>
+
+
+<!-- MESEJ ALUAN -->
+<section>
+
+    <h2 class="title">🌟 Mesej Aluan</h2>
+
+    <div style="
+    background:#f5e8c8;
+    padding:40px;
+    border-radius:25px;
+    width:85%;
+    margin:30px auto;
+    line-height:2;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    text-align:center;
+    ">
+
+    <p>
+    Selamat datang ke Bustana Kucing Perlis, pusat perlindungan kucing terbesar di Perlis yang menjaga lebih 2200 ekor kucing dengan penuh kasih sayang dan penjagaan terbaik. Misi utama kami adalah memberikan perlindungan, rawatan dan kehidupan yang lebih selesa kepada setiap kucing yang diselamatkan.
+    Terima kasih kerana menyokong usaha kami serta sudi melawat website Bustana Kucing Perlis untuk mengenali pusat perlindungan ini dengan lebih dekat.
+    </p>
+
+    </div>
+
+</section>
+
+    <!-- ABOUT -->
+    <section id="about">
+
+        <h2 class="title">Tentang Bustana Kucing</h2>
+
+        <div class="info">
+
+            <h2>Maklumat Utama</h2>
+          <img src="image/manager.jpg" 
+alt="Pengurus Bustana Kucing" 
+style="width:300px; height:260px; object-fit:cover; border-radius:15px; display:block; margin:20px auto;">
+            <p><b>Pengurus:</b> Mohd Taufik Bin Md Zain</p>
+
+            <p><b>No Telefon:</b> 013-4300443</p>
+
+            <p><b>Tahun Ditubuhkan:</b> March 2015</p>
+
+            <p><b>Jumlah Kucing:</b> Lebih 2200 ekor</p>
+
+            <p><b>Keluasan Sangkar:</b> 33 meter x 17 meter</p>
+
+            <p>
+                Bustana Kucing Perlis merupakan pusat perlindungan haiwan yang sangat terkenal di Perlis.
+                Tempat ini menjadi rumah sementara dan pusat penjagaan kepada ribuan kucing yang memerlukan
+                perlindungan, rawatan dan kasih sayang.
+            </p>
+
+            <p>
+                Mohd Taufik Bin Md Zain memainkan peranan penting dalam memastikan semua operasi berjalan
+                dengan lancar. Beliau sangat berdedikasi dalam menjaga kebajikan kucing dan memastikan
+                semua haiwan berada dalam keadaan sihat dan selamat.
+            </p>
+
+            <p><b>Antara tugas utama beliau ialah:</b></p>
+
+<ul style="line-height:2; margin-left:25px;">
+
+    <li>Mengurus operasi harian Bustana Kucing Perlis.</li>
+
+    <li>Memastikan kebersihan kawasan dan sangkar sentiasa terjaga.</li>
+
+    <li>Memantau kesihatan semua kucing dari semasa ke semasa.</li>
+
+    <li>Menyediakan makanan dan rawatan yang mencukupi kepada haiwan.</li>
+
+    <li>Menyelia pekerja di setiap wad seperti Wad ICU, Wad Parvo dan Wad Pemulihan.</li>
+
+    <li>Memastikan keselamatan dan keselesaan semua kucing sentiasa terjamin.</li>
+
+    <li>Membantu menyelamatkan dan menjaga kucing terbiar atau sakit.</li>
+
+</ul>
+
+<p>
+    Sikap penyayang, bertanggungjawab dan komited yang dimiliki oleh beliau menjadikan Bustana Kucing Perlis sebagai sebuah pusat perlindungan haiwan yang dihormati dan dipercayai oleh masyarakat setempat.
+</p>
+        </div>
+
+    </section>
+
+    <!-- FACILITY -->
+    <section id="facility">
+
+        <h2 class="title">Wad & Kemudahan</h2>
+
+        <div class="container">
+
+            <div class="card">
+                <h3>🏥 Wad Parvo</h3>
+                <p>
+                    Wad khas untuk rawatan kucing yang dijangkiti penyakit parvo dan memerlukan penjagaan rapi.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>💉 Wad ICU</h3>
+                <p>
+                    Menempatkan kucing yang berada dalam keadaan kritikal dan memerlukan pemantauan sepanjang masa.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>🐱 Wad Ibu & Anak</h3>
+                <p>
+                    Tempat khas untuk ibu kucing dan anak-anak kecil agar lebih selesa dan selamat.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>🩺 Wad Pemulihan</h3>
+                <p>
+                    Menempatkan kucing yang sedang menjalani proses pemulihan selepas rawatan.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>🧼 Wad Sporo</h3>
+                <p>
+                    Wad khas bagi kucing yang mengalami masalah kulit dan jangkitan kulat.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>🏠 Wad Am</h3>
+                <p>
+                    Kawasan utama penempatan kucing yang sihat dan aktif sebelum diadopsi.
+                </p>
+            </div>
+
+        </div>
+<!-- CABARAN -->
+
+
+<div style="
+background:#f5e8c8;
+padding:40px;
+border-radius:25px;
+width:85%;
+margin:30px auto;
+line-height:2;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+text-align:center;
+">
+<h2 class="title">⚠️ Cabaran Penjagaan</h2>
+    
+<p><b>Antara cabaran utama ialah:</b></p>
+
+<ul style="line-height:2; margin-left:25px;">
+<img src="image/CABARAN1.0.jpg" 
+    style="
+    width:300px; 
+    height:350px; 
+    object-fit:cover; 
+    border-radius:15px; 
+    display:block; 
+    margin:20px auto;
+    ">
+
+    <p>Menjaga kebersihan sangkar dan kawasan penempatan kucing.</p>
+<img src="image/CABARAN2.0.jpg" 
+    style="
+    width:300px; 
+    height:350px; 
+    object-fit:cover; 
+    border-radius:15px; 
+    display:block; 
+    margin:20px auto;
+    ">
+    <p>Memastikan semua kucing menerima rawatan tepat pada waktunya.</p>
+<img src="image/CABARAN3.0.jpg" 
+    style="
+    width:300px; 
+    height:350px; 
+    object-fit:cover; 
+    border-radius:15px; 
+    display:block; 
+    margin:20px auto;
+    ">
+    <p>Menyediakan makanan yang mencukupi setiap hari.</p>
+<img src="image/CABARAN4.0.jpg" 
+    style="
+    width:300px; 
+    height:350px; 
+    object-fit:cover; 
+    border-radius:15px; 
+    display:block; 
+    margin:20px auto;
+    ">
+    <p>Memastikan setiap kucing berada dalam keadaan sihat dan selamat.</p>
+
+
+</ul>
+
+<p>
+    Selain itu, pihak Bustana Kucing juga perlu memastikan wabak penyakit dapat dikawal dengan baik agar tidak merebak kepada kucing lain.
+</p>
+
+</div>
+
+
+<!-- LANGKAH PENJAGAAN -->
+
+
+<div style="
+background:#f5e8c8;
+padding:40px;
+border-radius:25px;
+width:85%;
+margin:30px auto;
+line-height:2;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+text-align:center;
+">
+<h2 class="title">🩺 Langkah Penjagaan</h2>
+    <img src="image/langkah.jpg" 
+    style="
+    width:180px; 
+    height:220px; 
+    object-fit:cover; 
+    border-radius:15px; 
+    display:block; 
+    margin:20px auto;
+    ">
+
+    <p>✔️ Pemeriksaan kesihatan dilakukan setiap hari.</p>
+
+    <p>✔️ Kucing yang sakit ditempatkan di wad khas seperti Wad ICU dan Wad Parvo.</p>
+
+    <p>✔️ Semua sangkar dibersihkan secara berkala untuk memastikan kebersihan.</p>
+
+    <p>✔️ Makanan dan ubat diberikan mengikut jadual yang ditetapkan.</p>
+
+</div>
+    </section>
+
+    <!-- STAFF -->
+    <section>
+
+        <h2 class="title">Pasukan Pekerja</h2>
+
+        <div class="info">
+
+            <p>
+    <img src="image/PEKERJA.JPG"style="
+    width:300px; 
+    height:300px; 
+    object-fit:cover; 
+    border-radius:15px; 
+    display:block; 
+    margin:20px auto;
+    ">
+🐱 Bustana Kucing Perlis mempunyai seramai 27 orang pekerja warga tempatan yang sangat berpengalaman dan berdedikasi dalam menjaga kebajikan haiwan, khususnya kucing yang memerlukan perlindungan dan kasih sayang.
+
+
+<p>
+    💖 Setiap pekerja memainkan peranan penting dalam memastikan semua kucing berada dalam keadaan sihat, selesa dan selamat setiap hari. Walaupun tugas mereka agak mencabar, mereka tetap menjalankan tanggungjawab dengan penuh kesabaran dan keikhlasan.
+</p>
+
+<p>
+    🏥 Setiap wad mempunyai seorang leader yang bertanggungjawab mengurus operasi harian serta memantau kebersihan dan kesihatan kucing agar sentiasa terjaga dengan baik.
+</p>
+
+<p>
+    🤝 Semua pekerja bekerjasama sebagai satu pasukan yang kuat demi memberikan layanan, rawatan dan perhatian terbaik kepada setiap kucing yang berada di pusat perlindungan ini.
+</p>
+
+<p>
+    ✨ Kasih sayang dan usaha yang diberikan oleh mereka membuktikan bahawa setiap haiwan juga layak untuk hidup dengan selesa, dihargai dan disayangi.
+</p>
+
+        </div>
+
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery">
+
+        <h2 class="title">Galeri Bustana Kucing</h2>
+
+        <div class="gallery">
+
+            <img src="image/cat1.jpg">
+            <img src="image/cat2.jpg">
+            <img src="image/cat3.jpg">
+             </div>
+
+    </section>
+<!-- CONTACT -->
+<h2 class="title">📞 Hubungi Kami</h2>
+
+<div style="
+background:#f5e8c8;
+padding:40px;
+border-radius:25px;
+width:85%;
+margin:30px auto;
+line-height:2.5;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+text-align:center;
+font-size:20px;
+">
+
+    <p>📘 <b>Facebook:</b> Bustana Kucing</p>
+
+    <p>📸 <b>Instagram:</b> @bustanakucing</p>
+
+    <p>📞 <b>Contact:</b> 018-6682303 / 013-4300443</p>
+
+    <p>
+        Bustana Kucing Perlis sentiasa mengalu-alukan kedatangan pencinta haiwan
+        yang ingin membantu, melawat atau memberikan sumbangan kepada kucing-kucing
+        yang berada di pusat perlindungan ini.
+    </p>
+
+</div>
+    <!-- FOOTER -->
+    <footer>
+
+        © 2026 Bustana Kucing Perlis | Dibina untuk Assignment Web Design
+
+    </footer>
+
+</body>
+</html>
